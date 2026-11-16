@@ -222,3 +222,16 @@ h3.sub {
 .brand { color: #fff; }
 .links a { color: #b8c3d6; }
 .links a:hover { color: #9be3ff; }
+
+/* language switch */
+.nav { position: relative; }
+.brand { white-space: nowrap; }
+.links { gap: 4px 16px; }
+.lang {
+  flex: none; color: #e9eef7; border: 1px solid rgba(255,255,255,.3); border-radius: 999px;
+  padding: 1px 10px; font-size: .78rem; font-weight: 600; letter-spacing: .05em;
+}
+.lang:hover { color: #9be3ff; border-color: #9be3ff; text-decoration: none; }
+@media (max-width: 760px) {
+  .lang { position: absolute; right: 16px; top: 12px; }
+}
