@@ -141,9 +141,11 @@ h3.sub {
 }
 
 @media (max-width: 760px) {
-  .nav { flex-direction: column; align-items: flex-start; gap: 6px; }
-  .links { gap: 2px 14px; font-size: .88rem; }
-  html { scroll-padding-top: 110px; }
+  .nav { flex-direction: column; align-items: stretch; gap: 4px; padding: 10px 16px; }
+  .links { flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; gap: 0 16px; font-size: .88rem;
+           padding-bottom: 4px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .links::-webkit-scrollbar { display: none; }
+  html { scroll-padding-top: 96px; }
   .hero { grid-template-columns: 1fr; gap: 20px; padding-top: 40px; }
   .avatar { width: 110px; height: 110px; font-size: 2.2rem; }
   .hero h1 { font-size: 2.1rem; }
