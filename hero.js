@@ -239,3 +239,12 @@
   }
   requestAnimationFrame(frame);
 })();
+
+/* Load the extra visual parts (extras.js sits next to this file). */
+(function () {
+  var me = document.currentScript;
+  if (!me) return;
+  var s = document.createElement("script");
+  s.src = me.src.replace(/hero\.js(\?.*)?$/, "extras.js");
+  document.body.appendChild(s);
+})();

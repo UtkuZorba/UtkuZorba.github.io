@@ -1,0 +1,92 @@
+/* ===== visual extras ===== */
+:root { --violet: #6b4fd6; --violet-soft: #ece8fb; }
+@media (prefers-color-scheme: dark) { :root { --violet: #b39cff; --violet-soft: #241f3a; } }
+
+/* section titles: short gradient rule that echoes the hero colours */
+main h2 { border-bottom: 0; position: relative; padding-bottom: 14px; }
+main h2::after {
+  content: ""; position: absolute; left: 0; bottom: 0; width: 64px; height: 3px; border-radius: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--violet));
+}
+
+/* speed-of-light dial */
+.dial {
+  margin-top: 48px; padding: 28px; border-radius: 16px;
+  background: var(--surface); border: 1px solid var(--line);
+  display: grid; grid-template-columns: 1fr 1.1fr; gap: 32px; align-items: center;
+}
+.dial .kicker {
+  margin: 0 0 6px; font-size: .74rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--violet);
+}
+.dial h2 { margin: 0 0 12px; font-size: 1.55rem; padding-bottom: 0; }
+.dial h2::after { display: none; }
+.dial p { margin: 0 0 14px; }
+#cones { width: 100%; height: 340px; display: block; border-radius: 12px;
+  background: radial-gradient(ellipse at center, var(--accent-soft) 0%, transparent 70%); }
+.dial-ctl { margin: 18px 0 8px; }
+.dial-ctl input[type=range] { width: 100%; accent-color: var(--violet); cursor: pointer; }
+.dial-ends { display: flex; justify-content: space-between; font-size: .8rem; color: var(--muted); margin-top: 2px; }
+.dial-ends b { color: var(--ink); font-weight: 600; }
+#c-value { font-family: var(--serif); font-style: italic; color: var(--violet); font-size: 1.05rem; }
+#c-state { min-height: 5.2em; font-size: .94rem; color: var(--muted); }
+#c-state b { color: var(--ink); }
+
+/* research cards with small glyphs */
+.card .glyph { width: 46px; height: 46px; display: block; margin-bottom: 10px; color: var(--accent); }
+.card .glyph .v { color: var(--violet); }
+.cards .card { border-top: 0; position: relative; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease, border-color .25s; }
+.cards .card::before {
+  content: ""; position: absolute; left: 0; top: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--violet));
+}
+.cards .card:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--violet) 40%, var(--line));
+  box-shadow: 0 10px 28px -14px color-mix(in srgb, var(--violet) 55%, transparent); }
+
+/* publication chart */
+.pub-viz { margin: 22px 0 6px; padding: 18px 20px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.pub-viz svg { width: 100%; max-width: 620px; height: auto; display: block; }
+.pub-viz .bar { cursor: pointer; outline: none; }
+.pub-viz .bar-bg { fill: var(--bg); }
+.pub-viz .bar-j { fill: var(--accent); transition: fill .2s; }
+.pub-viz .bar-p { fill: var(--violet-soft); stroke: var(--violet); stroke-width: 1.5; stroke-dasharray: 4 3; }
+.pub-viz .bar:hover .bar-j, .pub-viz .bar:focus .bar-j, .pub-viz .bar.on .bar-j { fill: var(--violet); }
+.pub-viz .bar.on .bar-bg { fill: var(--violet-soft); }
+.pub-viz .bar-n { font: 600 13px var(--sans); fill: var(--ink); text-anchor: middle; }
+.pub-viz .bar-y { font: 12px var(--sans); fill: var(--muted); text-anchor: middle; }
+.pub-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; font-size: .84rem; color: var(--muted); margin-top: 10px; }
+.pub-legend .sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.pub-legend .sw-j { background: var(--accent); }
+.pub-legend .sw-p { background: var(--violet-soft); border: 1.5px dashed var(--violet); }
+.pub-legend .hint { font-style: italic; }
+.journals { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.jchip { font-size: .8rem; padding: 3px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+.jchip b { margin-left: 4px; color: var(--ink); }
+.pubs .j i { font-style: normal; font-weight: 600; color: var(--accent); }
+.pubs li { transition: opacity .25s, background-color .25s; border-radius: 8px; }
+#publications.filtering .pubs li { opacity: .3; }
+#publications.filtering .pubs li.hit { opacity: 1; background: var(--violet-soft); box-shadow: 0 0 0 8px var(--violet-soft); }
+
+/* career ribbon */
+#career { margin: 4px 0 30px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+#career svg { min-width: 640px; width: 100%; height: auto; display: block; }
+#career .lane { font: 600 11px var(--sans); letter-spacing: .08em; text-transform: uppercase; fill: var(--muted); }
+#career .grid { stroke: var(--line); stroke-dasharray: 2 4; }
+#career .axis { stroke: var(--muted); stroke-width: 1.5; }
+#career .tick { font: 11px var(--sans); fill: var(--muted); text-anchor: middle; }
+#career .seg { fill: var(--accent); opacity: .88; }
+#career .seg.away { fill: var(--violet); }
+#career .seg.current { opacity: 1; }
+#career .seg-l { font: 600 12px var(--sans); fill: #fff; }
+#career .seg-o { font: 600 12px var(--sans); fill: var(--ink); }
+#career .deg { fill: var(--surface); stroke: var(--violet); stroke-width: 2.5; }
+#career .deg-l { font: 600 11px var(--sans); fill: var(--ink); text-anchor: middle; }
+
+/* reveal */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+@media (max-width: 760px) {
+  .dial { grid-template-columns: 1fr; padding: 20px; gap: 12px; margin-top: 32px; }
+  #cones { height: 260px; }
+}
+@media (prefers-color-scheme: dark) { #career .seg-l { fill: #0b1220; } }
