@@ -8,8 +8,8 @@
       en: "Physics Engineering, Istanbul Technical University",
       tr: "Fizik Mühendisliği, İstanbul Teknik Üniversitesi" },
     { name: "Mert Acar", level: "bsc",
-      en: "Yıldız Technical University",
-      tr: "Yıldız Teknik Üniversitesi" }
+      en: "Physics, Yıldız Technical University",
+      tr: "Fizik Bölümü, Yıldız Teknik Üniversitesi" }
   ];
 
   var TR = (document.documentElement.lang || "").indexOf("tr") === 0;
