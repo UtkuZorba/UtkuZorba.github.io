@@ -240,11 +240,14 @@
   requestAnimationFrame(frame);
 })();
 
-/* Load the extra visual parts (extras.js sits next to this file). */
+/* Load the extra parts (these files sit next to this one). */
 (function () {
   var me = document.currentScript;
   if (!me) return;
-  var s = document.createElement("script");
-  s.src = me.src.replace(/hero\.js(\?.*)?$/, "extras.js");
-  document.body.appendChild(s);
+  ["group.js", "extras.js"].forEach(function (name) {
+    var s = document.createElement("script");
+    s.src = me.src.replace(/hero\.js(\?.*)?$/, name);
+    s.async = false;
+    document.body.appendChild(s);
+  });
 })();
