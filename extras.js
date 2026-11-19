@@ -256,12 +256,12 @@
     var L = TR ? {
       home: "İstanbul", away: "Yurt dışı", now: "bugün",
       bars: [[2013, 2021, "İTÜ", 0], [2021, 2023, "Boğaziçi", 0], [2023, 2024, "İTÜ", 0], [2024, 2026.9, "İÜC", 0, 1],
-             [2019, 2020, "Groningen", 1], [2025.75, 2025.92, "Kopenhag · NBI", 1]],
+             [2019.92, 2020.25, "Groningen", 1], [2025.75, 2025.92, "Kopenhag · NBI", 1]],
       dots: [[2010, "Lisans"], [2014, "Y. Lisans"], [2021, "Doktora"]]
     } : {
       home: "Istanbul", away: "Abroad", now: "now",
       bars: [[2013, 2021, "ITU", 0], [2021, 2023, "Boğaziçi", 0], [2023, 2024, "ITU", 0], [2024, 2026.9, "IUC", 0, 1],
-             [2019, 2020, "Groningen", 1], [2025.75, 2025.92, "Copenhagen · NBI", 1]],
+             [2019.92, 2020.25, "Groningen", 1], [2025.75, 2025.92, "Copenhagen · NBI", 1]],
       dots: [[2010, "B.Sc."], [2014, "M.Sc."], [2021, "Ph.D."]]
     };
     var A = 2009.5, B = 2027, PADL = 78, Wd = 760, Hd = 150;
