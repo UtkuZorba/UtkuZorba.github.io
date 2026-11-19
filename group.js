@@ -1,7 +1,7 @@
 /* Research group section. To add or remove a member, edit the MEMBERS list below. */
 (function () {
   var MEMBERS = [
-    { name: "Ertuğrul Ekzi", level: "phd",
+    { name: "Ertuğrul Ekiz", level: "phd",
       en: "Physics Engineering, Istanbul Technical University",
       tr: "Fizik Mühendisliği, İstanbul Teknik Üniversitesi" },
     { name: "Enes Bal", level: "msc",
